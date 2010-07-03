@@ -1,17 +1,14 @@
 <?php
 /*
+http://www.bad-behavior.ioerror.us/
+
 Bad Behavior - detects and blocks unwanted Web accesses
-Copyright (C) 2005-2006 Michael Hampton
+Copyright (C) 2005 Michael Hampton
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
 (at your option) any later version.
-
-As a special exemption, you may link this program with any of the
-programs listed below, regardless of the license terms of those
-programs, and distribute the resulting program, without including the
-source code for such programs: ExpressionEngine
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,12 +18,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-
-Please report any problems to badbots AT ioerror DOT us
 */
 
-###############################################################################
-###############################################################################
+// This file is the entry point for Bad Behavior.
 
 if (!defined('PUN_ROOT')) exit;
 
@@ -47,6 +41,7 @@ $bb2_settings_defaults = array(
 );
 
 // Bad Behavior callback functions.
+require_once("bad-behavior-mysql.php");
 
 // Return current time in the format preferred by your database.
 function bb2_db_date() {
@@ -54,7 +49,7 @@ function bb2_db_date() {
 }
 
 // Return affected rows from most recent query.
-function bb2_db_affected_rows() {
+function bb2_db_affected_rows($result) {
 	global $db;
 	return $db->affected_rows();
 }

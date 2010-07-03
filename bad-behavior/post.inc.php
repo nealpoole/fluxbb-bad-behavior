@@ -5,7 +5,7 @@ function bb2_post($settings, $package)
 {
 	// Check blackhole lists for known spam/malicious activity
 	// require_once(BB2_CORE . "/blackhole.inc.php");
-	// bb2_test($settings, $package, bb2_blackhole($package));
+	// if ($r = bb2_blackhole($package)) return $r;
 
 	// MovableType needs specialized screening
 	if (stripos($package['headers_mixed']['User-Agent'], "MovableType") !== FALSE) {
