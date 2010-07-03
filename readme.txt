@@ -3,7 +3,7 @@
 ##        Mod title:  Bad Behavior Integration for FluxBB
 ##
 ##      Mod version:  1.1.0
-##  Works on FluxBB:  1.4.*
+##  Works on FluxBB:  1.2.*, 1.4.*
 ##     Release date:  2010-07-03
 ##           Author:  Smartys (smartys@punbb-hosting.com)
 ##
