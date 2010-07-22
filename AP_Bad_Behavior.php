@@ -32,7 +32,7 @@ define('PUN_PLUGIN_LOADED', 1);
 // If the "Save" button was clicked
 if (isset($_POST['save']))
 {
-	$form = array_map("trim", $_POST['form']);
+	$form = array_map("intval", $_POST['form']);
 	while (list($key, $input) = @each($form))
 	{
 		$db->query('UPDATE '.$db->prefix.'config SET conf_value='.$input.' WHERE conf_name=\'o_badbehavior_'.$db->escape($key).'\'') or error('Unable to update board config', __FILE__, __LINE__, $db->error());
