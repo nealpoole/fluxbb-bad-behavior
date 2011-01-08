@@ -2,9 +2,9 @@
 ##
 ##        Mod title:  Bad Behavior Integration for FluxBB
 ##
-##      Mod version:  1.1.1
+##      Mod version:  1.1.2
 ##  Works on FluxBB:  1.2.*, 1.4.*
-##     Release date:  2010-07-21
+##     Release date:  2011-01-08
 ##           Author:  Smartys (smartys@punbb-hosting.com)
 ##
 ##      Description:  This mod integrates the Bad Behavior (http://www.bad-behavior.ioerror.us)
@@ -20,7 +20,7 @@
 ##                    the value of the 'logging' key of the $bb2_settings_defaults array in
 ##                    bad-behavior-fluxbb.php to false.
 ##
-##                    This mod includes Bad Behavior version 2.1.2
+##                    This mod includes Bad Behavior version 2.1.8
 ##
 ##       DISCLAIMER:  Please note that "mods" are not officially supported by
 ##                    FluxBB. Installation of this modification is done at your
