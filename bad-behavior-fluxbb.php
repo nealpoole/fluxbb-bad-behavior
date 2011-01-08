@@ -166,7 +166,6 @@ function bb2_relative_path() {
 }
 
 // Calls inward to Bad Behavor itself.
-require_once(BB2_CWD . "/bad-behavior/version.inc.php");
 require_once(BB2_CWD . "/bad-behavior/core.inc.php");
 bb2_install();
 
