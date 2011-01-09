@@ -50,7 +50,7 @@ else
 	generate_admin_menu($plugin);
 
 ?>
-	<div id="badbehaviorplugin" class="blockform">
+	<div id="badbehaviorplugin" class="plugin blockform">
 		<h2><span>Bad Behavior Plugin</span></h2>
 		<div class="box">
 			<div class="inbox">

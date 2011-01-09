@@ -153,7 +153,7 @@ function bb2_insert_stats($force = false) {
 	if ($force || $settings['display_stats']) {
 		$blocked = bb2_db_rows(bb2_db_query("SELECT COUNT(*) FROM " . $settings['log_table'] . " WHERE `key` NOT LIKE '00000000'"));
 		if ($blocked !== FALSE) {
-			echo sprintf('<p><a href="http://www.bad-behavior.ioerror.us/">%1$s</a> %2$s <strong>%3$s</strong> %4$s</p>', 'Bad Behavior', 'has blocked', $blocked[0]["COUNT(*)"], 'access attempt(s) in the last 7 days.');
+			echo sprintf('<span><a href="http://www.bad-behavior.ioerror.us/">%1$s</a> %2$s <strong>%3$s</strong> %4$s</span>', 'Bad Behavior', 'has blocked', $blocked[0]["COUNT(*)"], 'access attempt(s) in the last 7 days.');
 		}
 	}
 }
