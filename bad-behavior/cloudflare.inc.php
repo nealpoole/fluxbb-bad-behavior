@@ -12,5 +12,3 @@ function bb2_cloudflare($package)
 #	}
 	return false;
 }
-
-?>

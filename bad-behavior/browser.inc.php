@@ -82,5 +82,3 @@ function bb2_safari($package)
 	}
 	return false;
 }
-
-?>

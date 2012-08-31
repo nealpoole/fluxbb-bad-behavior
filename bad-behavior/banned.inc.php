@@ -7,6 +7,8 @@ require_once(BB2_CORE . "/responses.inc.php");
 
 function bb2_housekeeping($settings, $package)
 {
+	if (!$settings['logging']) return;
+
 	// FIXME Yes, the interval's hard coded (again) for now.
 	$query = "DELETE FROM `" . $settings['log_table'] . "` WHERE `date` < DATE_SUB('" . bb2_db_date() . "', INTERVAL 7 DAY)";
 	bb2_db_query($query);
@@ -61,5 +63,3 @@ function bb2_log_denial($settings, $package, $key, $previous_key=false)
 	if (!$settings['logging']) return;
 	bb2_db_query(bb2_insert($settings, $package, $key));
 }
-
-?>
